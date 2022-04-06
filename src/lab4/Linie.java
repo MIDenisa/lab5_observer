@@ -1,14 +1,30 @@
 package lab4;
-import java.awt.Canvas;
+import java.awt.Color;
+import java.awt.Graphics;
 public class Linie extends FiguraGeometrica{
 	
-	Punct a,b;
+	int x;
+	int y;
 	public Linie() {}
 	
-	public Linie(Punct x, Punct y)
+	public Linie(int x,int y)
 	{
-		a=x;
-		b=y;
+		 this.x = x;
+	     this.y = y;
+	}
+	
+	public void paint(Graphics g1)
+	{
+		int r,g,b1;
+		
+		g1.drawLine(100, 100, 400, 100);
+		r=(int)(Math.random()*256);
+		g=(int)(Math.random()*256);
+		b1=(int)(Math.random()*256);
+				
+		g1.setColor(new Color(r,g,b1));
+		
+				
 	}
 
 }
